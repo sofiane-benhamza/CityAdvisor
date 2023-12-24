@@ -1,0 +1,133 @@
+:root {
+    --amazing-custom-show: -150vh;
+    --SearchBar: 40vh;
+    --Infos: 100vh;
+    --Header: 0px;
+}
+
+.child {
+    padding: 10px;
+    margin: 5px;
+    border: 2px solid black;
+}
+
+#custom-show {
+    position: absolute;
+    bottom: var(--amazing-custom-show);
+}
+
+#SearchBar {
+    position: absolute;
+    top: var(--SearchBar);
+    transition: all .5s;
+}
+
+#infos {
+    position: absolute;
+    top: var(--Infos);
+    transition: all .5s;
+    transition-delay: .2s;
+    height: 85vh;
+}
+
+#infos * {
+    border-radius: 10px;
+    padding: 0;
+}
+
+.kids {
+    height: 26vh;
+    overflow: hidden;
+}
+
+input {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: bolder;
+
+}
+
+
+/******HEADER******/
+
+.header-content {
+    min-height: 75vh;
+    background: url("../../assets/images/planet-earth-background.jpg") center/cover no-repeat;
+    flex-direction: column;
+}
+
+.header-title {
+    font-size: -1rem;
+    margin-bottom: 2.8rem;
+    opacity: 0.8;
+    max-width: 770px;
+}
+
+#navbar {
+    position: absolute;
+    width: 90vw;
+    top: var(--Header);
+    height: 70px;
+    transition: all .5s;
+    transition-delay: .1s;
+
+}
+
+.mx-3.fw-bolder {
+    color: red important !;
+}
+
+.nav-link.text-light:hover,
+.fs-24.ls-1.px-4.fw-bold:hover {
+    transition: all .3s;
+    text-shadow: 0 0 8px black, 0 0 8px black, 0 0 8px black;
+}
+
+.custom-spinner {
+    width: 16px;
+    height: 16px;
+}
+
+.list-group-item {
+    text-align: center;
+    border: 4px solid black;
+}
+
+.bg-gradient {
+    background-image: linear-gradient(to right, red, yellow, green);
+    /* Gradient from red to green */
+}
+
+@keyframes vibrate {
+    0% {
+        transform: translateX(0);
+    }
+
+    20% {
+        transform: translateX(-2px) rotate(-1deg);
+    }
+
+    40% {
+        transform: translateX(2px) rotate(1deg);
+    }
+
+    60% {
+        transform: translateX(-1px) rotate(-1deg);
+    }
+
+    80% {
+        transform: translateX(1px) rotate(1deg);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* Apply animation to the element */
+.vibrate-element {
+    display: inline-block;
+    animation: vibrate 1s ease infinite;
+    /* Adjust duration and timing function as needed */
+}
+
+/**************/

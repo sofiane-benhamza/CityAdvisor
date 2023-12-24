@@ -1,0 +1,30 @@
+import React from "react";
+import "bootstrap/dist/css/bootstrap.css";
+import "bootstrap-icons/font/bootstrap-icons.css";
+import "./style.css";
+import Map from "./cards/Map";
+
+function CityCard() {
+  return (
+    <div
+      className="container bg-dark rounded child d-flex align-items-center w-100 justify-content-center"
+      id="infos"
+    >
+      <div className="row justify-content-center w-100">
+        <div className="col-lg-3 col-md-6 col-sm-12 child kids"></div>
+        <div className="col-lg-5 col-md-6 col-sm-12 child kids">xxxx</div>
+        <div className="col-lg-3 col-md-6 col-sm-12 child kids">
+          <Map />
+        </div>
+        <div className="col-lg-5 col-md-6 col-sm-12 child kids">xxx</div>
+        <div className="col-lg-3 col-md-6 col-sm-12 child kids">xxxx</div>
+        <div className="col-lg-3 col-md-6 col-sm-12 child kids">xxx</div>
+        <div className="col-lg-3 col-md-6 col-sm-12 child kids">xxx</div>
+        <div className="col-lg-3 col-md-6 col-sm-12 child kids">xxxx</div>
+        <div className="col-lg-5 col-md-6 col-sm-12 child kids">xxx</div>
+      </div>
+    </div>
+  );
+}
+
+export default CityCard;
