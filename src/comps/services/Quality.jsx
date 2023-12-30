@@ -6,7 +6,7 @@ export default function Quality({ q }) {
   useEffect(() => {
     setTimeout(() => {
       setQuality(q);
-    }, 2000);
+    }, 200);
   }, [q]);
   return (
     <>

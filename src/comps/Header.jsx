@@ -3,10 +3,21 @@ import { Link } from "react-router-dom";
 import "./style.css";
 import logoImg from "../img/logo.png";
 
-const Header = () => {
+const Header = ({ setConnected }) => {
+  const disconnect = () => {
+    localStorage.removeItem("userLoggedIn");
+    setConnected(false);
+  };
+
   return (
-    <div className="navbar bg-dark rounded child" id="navbar">
-      <div className="container navbar-content flex">
+    <div
+      className="navbar text-dark rounded d-flex justify-content-center"
+      id="navbar"
+    >
+      <div
+        className="container navbar-content flex child rounded"
+        style={{ backgroundColor: "rgba(255, 255, 255, .5)" }}
+      >
         <div className="flex flex-sb">
           <Link to="/home" className="navbar-brand flex">
             <img
@@ -18,37 +29,25 @@ const Header = () => {
               }}
             />
             <span
-              className="text-uppercase fw-7 fs-24 ls-1 px-4 fw-bold text-light"
-              style={{ fontFamily: "'Pacifico', cursive" }}
+              className="fw-bolder text-dark simple"
+              style={{ fontSize: "24px" }}
             >
               City&nbsp;Advisor
             </span>
           </Link>
         </div>
-        <div className="d-flex ">
+        <div className="d-flex">
           <ul className="navbar-nav flex-row">
             <li
               className="nav-item mx-3 fw-bolder"
               style={{ fontSize: "20px" }}
             >
-              <Link to="/home" className="nav-link text-light">
-                Accueil
-              </Link>
-            </li>
-            <li
-              className="nav-item mx-3 fw-bolder"
-              style={{ fontSize: "20px" }}
-            >
-              <Link to="/q_a" className="nav-link text-light">
-                Q&A
-              </Link>
-            </li>
-            <li
-              className="nav-item mx-3 fw-bolder"
-              style={{ fontSize: "20px" }}
-            >
-              <Link to="/about" className="nav-link text-light">
-                A propos
+              <Link
+                to="/home"
+                className="nav-link text-dark simple"
+                onClick={disconnect}
+              >
+                Se déconnecter
               </Link>
             </li>
           </ul>

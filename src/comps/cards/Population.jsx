@@ -5,10 +5,12 @@ import GetPopulation from "../services/GetPopulation";
 export default function Population() {
   const { city, country } = useContext(CoordsContext);
 
-  const [numberOfHumans, setNumberOfHumans] = useState(50);
+  const [numberOfHumans, setNumberOfHumans] = useState(500000000);
   return (
     <p className="bg-light text-center text-dark rounded bolder p-2 child">
-      Il y a plus que <strong>{numberOfHumans}</strong> personnes vivant à{" "}
+      Il y a plus que <strong>{numberOfHumans}</strong>{" "}
+      <strong style={{ fontSize: "28px" }}>🧍‍♂️&nbsp;🧍🏻‍♂️&nbsp;🧍🏿‍♂️</strong> <br />{" "}
+      vivant à{" "}
       <strong>
         {city},&nbsp;{country.toUpperCase()}
       </strong>

@@ -3,6 +3,7 @@
     --SearchBar: 40vh;
     --Infos: 100vh;
     --Header: 0px;
+    --headerHover: cyan;
 }
 
 .child {
@@ -64,11 +65,14 @@ input {
 
 #navbar {
     position: absolute;
+    color: black;
     width: 90vw;
     top: var(--Header);
     height: 70px;
     transition: all .5s;
     transition-delay: .1s;
+    text-shadow: 0 0 12px white, 0 0 12px white, 0 0 12px white, 0 0 12px white;
+
 
 }
 
@@ -76,10 +80,17 @@ input {
     color: red important !;
 }
 
-.nav-link.text-light:hover,
+.simple {
+    font-family: 'roboto', cursive;
+}
+
+.nav-link:hover,
+#navbar>div>div.flex.flex-sb>a>span:hover,
 .fs-24.ls-1.px-4.fw-bold:hover {
+    box-sizing: border-box;
     transition: all .3s;
-    text-shadow: 0 0 8px black, 0 0 8px black, 0 0 8px black;
+    text-shadow: 0 0 8px var(--headerHover), 0 0 8px var(--headerHover), 0 0 8px var(--headerHover);
+    padding: auto 10px;
 }
 
 .custom-spinner {

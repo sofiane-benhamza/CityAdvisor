@@ -9,7 +9,7 @@ import backgroundImage from "./img/bg.gif";
 
 export const CoordsContext = createContext();
 
-function App() {
+function App({ setConnected }) {
   const [city, setCity] = useState("");
   const [country, setCountry] = useState("");
   const [lon, setLon] = useState(0);
@@ -18,7 +18,12 @@ function App() {
   const [airQua, setAirQu] = useState(0.0);
   const [weaQua, setWeaQu] = useState(0.0);
 
-  const IOQ = ((160 - airQua * 0.7 + weaQua * 0.3 + 100) / 214) * 100;
+  const IOQ = Math.max(
+    Math.min(((160 - airQua * 0.7 + weaQua * 0.3 + 100) / 214) * 100, 100),
+    0
+  );
+
+  console.log("IOQ : ", IOQ);
 
   const containerStyle = {
     minHeight: "100vh", // Adjust as needed
@@ -55,8 +60,8 @@ function App() {
   return (
     <Router>
       <div style={containerStyle}>
-        <div className="container d-flex gap-2 flex-wrap justify-content-around">
-          <Header />
+        <div className="container d-flex gap-2 flex-wrap justify-content-center ">
+          <Header setConnected={setConnected} />
           <SearchBar
             setLat={setMapLat}
             setLon={setMapLon}
@@ -69,7 +74,7 @@ function App() {
         </div>
       </div>
     </Router>
-  ); // Render SearchBar and conditionally render Amazing based on the value of barShown
+  );
 }
 
 export default App;

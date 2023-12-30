@@ -33,8 +33,8 @@ export default function Weather() {
       return 0; // Visibility is negative or invalid
     }
   }
-  /*
-  useEffect(() => {
+
+  /* useEffect(() => {
     const fetchWeatherData = async () => {
       if (city.length > 2) {
         try {

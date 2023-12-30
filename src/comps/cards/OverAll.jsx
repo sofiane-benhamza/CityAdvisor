@@ -28,7 +28,7 @@ export default function OverAll({ indice_of_quality }) {
     <div className="card w-100 p-2 h-25">
       <div className="card-body">
         <p className="text-dark fw-bolder">Indice de qualité de la ville</p>
-        <Quality q={50} />
+        <Quality q={IOQ} />
         <p style={{ fontFamily: "'Carter One', sans-serif", fontSize: "14px" }}>
           {whatToDo}
         </p>

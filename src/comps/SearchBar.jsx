@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import axios from "axios";
+import "./style.css";
 
 function SearchBar({ setLat, setLon, setCity, setCountry }) {
   const [SearchBarCentered, setSearchBarCentered] = useState(false);
@@ -82,8 +83,10 @@ function SearchBar({ setLat, setLon, setCity, setCountry }) {
   const checkCity = () => {
     if (!SearchBarCentered) {
       //only get infos if needed (bar centered)
-      URL = "http://localhost:9090/check?city=" + City;
+      var URL =
+        "http://" + import.meta.env.VITE_IP_ADDR + ":9090/check?city=" + City;
       console.log(URL);
+
       axios
         .get(URL)
         .then((res) => {
@@ -110,7 +113,8 @@ function SearchBar({ setLat, setLon, setCity, setCountry }) {
           }
         })
         .catch((error) => {
-          console.log("Error : ", error);
+          console.log("Error 784 : ", error);
+          0;
         });
     } else {
       setSearchButtonContent(<i className="bi bi-search"></i>);
@@ -138,7 +142,7 @@ function SearchBar({ setLat, setLon, setCity, setCountry }) {
           <div className="input-group-append">
             <button
               className="btn btn-dark"
-              style={{ width: "50px" }}
+              style={{ width: "50px", overflow: "hidden" }}
               type="button"
               onClick={checkCity}
             >
