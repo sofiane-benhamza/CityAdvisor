@@ -119,7 +119,7 @@ export default function Polution({ setAitQua }) {
   return (
     <div
       className="w-100 h-100 d-flex align-items-center justify-content-center mx-2"
-      style={{ position: "relative", top: "20px", left: "-30px" }}
+      style={{ position: "relative", top: "20px" }}
     >
       <AirQualityTable data={airQualityData} />
     </div>

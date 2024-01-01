@@ -45,7 +45,7 @@ const Signin = ({ setConnected }) => {
         <label htmlFor="exampleInputEmail1">Adresse email</label>
         <input
           type="email"
-          className="form-control m-2"
+          className="form-control mt-3 mb-4"
           id="exampleInputEmail1"
           aria-describedby="emailHelp"
           placeholder="Email"
@@ -58,7 +58,7 @@ const Signin = ({ setConnected }) => {
         <label htmlFor="exampleInputPassword1">Mot de passe</label>
         <input
           type="password"
-          className="form-control m-2"
+          className="form-control mt-3 mb-3"
           id="exampleInputPassword1"
           placeholder="Mot de passe"
           value={password}

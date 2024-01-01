@@ -3,27 +3,36 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <title>City Advisor : juste pour vous</title>
+  <link rel="icon" type="image/svg+xml" href="/src/img/icon.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Anton&family=Carter+One&family=Pacifico&family=Roboto&family=Space+Grotesk:wght@700&display=swap"
     rel="stylesheet">
-  <title>Vite + React</title>
+
+  <style>
+    @media (min-width: 768px) {
+      body {
+        overflow: hidden;
+      }
+    }
+
+    .bg-container {
+      min-height: 100vh;
+      background-image: url('/src/comps/img/bg.gif');
+      background-repeat: no-repeat;
+      /* Removed quotes */
+      background-size: cover;
+      background-attachment: fixed;
+    }
+  </style>
 </head>
 
-<body>
-  <div id="root" style="overflow: hidden;"></div>
+<body class="bg-container">
+  <div id="root"></div>
   <script type="module" src="/src/main.jsx"></script>
 </body>
-<style>
-  /* styles.css */
-  body {
-    overflow: hidden;
-
-
-  }
-</style>
 
 </html>

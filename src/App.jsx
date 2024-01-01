@@ -5,7 +5,6 @@ import Header from "./comps/Header";
 import "bootstrap/dist/css/bootstrap.css";
 import { BrowserRouter as Router } from "react-router-dom";
 import { useContext, createContext } from "react";
-import backgroundImage from "./img/bg.gif";
 
 export const CoordsContext = createContext();
 
@@ -23,13 +22,11 @@ function App({ setConnected }) {
     0
   );
 
-  console.log("IOQ : ", IOQ);
-
   const containerStyle = {
     minHeight: "100vh", // Adjust as needed
-    backgroundImage: `url(${backgroundImage})`, // Apply the imported background image
-    backgroundRepeat: "no-repeat",
+    backgroundRepeat: "repeat",
     backgroundSize: "cover",
+    backgroundAttachment: "fix",
     overflow: "hidden",
   };
 

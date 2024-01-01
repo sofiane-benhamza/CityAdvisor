@@ -12,7 +12,7 @@ const Navbar = () => {
     >
       <div className="container navbar-content flex">
         <div className="flex flex-sb">
-          <Link to="/home" className="navbar-brand flex px-4 ">
+          <Link to="/home" className="navbar-brand flex px-2 ">
             <img
               src={logoImg}
               alt="Site Logo"
@@ -21,10 +21,7 @@ const Navbar = () => {
                 height: "60px",
               }}
             />
-            <span
-              className="fw-bolder text-dark simple"
-              style={{ fontSize: "24px" }}
-            >
+            <span className="fw-bolder text-dark simple">
               City&nbsp;Advisor
             </span>
           </Link>
@@ -36,15 +33,12 @@ const Navbar = () => {
               style={{ fontSize: "20px" }}
             >
               <Link to="/signin" className="nav-link text-dark simple">
-                Se Connecter
+                <i className="bi bi-box-arrow-in-right"></i>{" "}
               </Link>
             </li>
-            <li
-              className="nav-item mx-3 fw-bolder"
-              style={{ fontSize: "20px" }}
-            >
+            <li className="nav-item fw-bolder" style={{ fontSize: "20px" }}>
               <Link to="/signup" className="nav-link text-dark simple">
-                Créer un Compte
+                <i className="bi bi-person-add"></i>{" "}
               </Link>
             </li>
           </ul>

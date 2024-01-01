@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import axios from "axios";
-import "./style.css";
 
 function SearchBar({ setLat, setLon, setCity, setCountry }) {
   const [SearchBarCentered, setSearchBarCentered] = useState(false);
@@ -83,10 +82,8 @@ function SearchBar({ setLat, setLon, setCity, setCountry }) {
   const checkCity = () => {
     if (!SearchBarCentered) {
       //only get infos if needed (bar centered)
-      var URL =
-        "http://" + import.meta.env.VITE_IP_ADDR + ":9090/check?city=" + City;
+      var URL = "http://localhost:9090/check?city=" + City;
       console.log(URL);
-
       axios
         .get(URL)
         .then((res) => {
@@ -113,8 +110,7 @@ function SearchBar({ setLat, setLon, setCity, setCountry }) {
           }
         })
         .catch((error) => {
-          console.log("Error 784 : ", error);
-          0;
+          console.log("Error : ", error);
         });
     } else {
       setSearchButtonContent(<i className="bi bi-search"></i>);
@@ -128,26 +124,28 @@ function SearchBar({ setLat, setLon, setCity, setCountry }) {
 
   return (
     <div className="d-flex justify-content-center vw-100 p-3 " id="SearchBar">
-      <div className="w-50">
-        <div className="input-group mb-3 ">
-          <input
-            type="text"
-            className="form-control text-center"
-            onChange={(e) => changeCity(e.target.value)} // Use arrow function to handle onChange
-            id="search-city"
-            placeholder={placeholder}
-            disabled={inputOff}
-          />
+      <div className="col-lg-5 col-md-7 col-sm-11 col-11">
+        <div className="w-100">
+          <div className="input-group mb-3 ">
+            <input
+              type="text"
+              className="form-control text-center"
+              onChange={(e) => changeCity(e.target.value)} // Use arrow function to handle onChange
+              id="search-city"
+              placeholder={placeholder}
+              disabled={inputOff}
+            />
 
-          <div className="input-group-append">
-            <button
-              className="btn btn-dark"
-              style={{ width: "50px", overflow: "hidden" }}
-              type="button"
-              onClick={checkCity}
-            >
-              {searchButtonContent}
-            </button>
+            <div className="input-group-append">
+              <button
+                className="btn btn-dark"
+                style={{ width: "50px" }}
+                type="button"
+                onClick={checkCity}
+              >
+                {searchButtonContent}
+              </button>
+            </div>
           </div>
         </div>
       </div>

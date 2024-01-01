@@ -15,10 +15,10 @@ const Header = ({ setConnected }) => {
       id="navbar"
     >
       <div
-        className="container navbar-content flex child rounded"
+        className="container navbar-content d-flex flex-row child rounded"
         style={{ backgroundColor: "rgba(255, 255, 255, .5)" }}
       >
-        <div className="flex flex-sb">
+        <div className="flex ">
           <Link to="/home" className="navbar-brand flex">
             <img
               src={logoImg}
@@ -28,29 +28,18 @@ const Header = ({ setConnected }) => {
                 height: "50px",
               }}
             />
-            <span
-              className="fw-bolder text-dark simple"
-              style={{ fontSize: "24px" }}
-            >
-              City&nbsp;Advisor
-            </span>
+            <span className="fw-bolder text-dark simple">City Advisor</span>
           </Link>
         </div>
         <div className="d-flex">
-          <ul className="navbar-nav flex-row">
-            <li
-              className="nav-item mx-3 fw-bolder"
-              style={{ fontSize: "20px" }}
-            >
-              <Link
-                to="/home"
-                className="nav-link text-dark simple"
-                onClick={disconnect}
-              >
-                Se déconnecter
-              </Link>
-            </li>
-          </ul>
+          <Link
+            to="/home"
+            className="nav-link text-dark simple fw-bold mx-3"
+            onClick={disconnect}
+            style={{ fontSize: "20px" }}
+          >
+            <i className="bi bi-box-arrow-right"></i>{" "}
+          </Link>
         </div>
       </div>
     </div>
