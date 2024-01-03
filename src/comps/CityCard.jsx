@@ -49,6 +49,10 @@ function CityCard() {
         className="container rounded d-flex flex-column align-items-center justify-content-center"
         id="infos"
       >
+        <br />
+        <br />
+        <br />
+
         <div className="d-flex flex-column flex-sm-row justify-content-center w-100">
           <div style={{ height: "700px" }}></div>
 

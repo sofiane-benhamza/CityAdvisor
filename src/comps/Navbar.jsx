@@ -1,9 +1,21 @@
-import React from "react";
+import { React, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./style.css";
 import logoImg from "../img/logo.png";
 
 const Navbar = () => {
+  const [CoLogo, setCoLogo] = useState("");
+  const [siLogo, setSiLogo] = useState("");
+  useEffect(() => {
+    if (window.innerWidth > 768) {
+      setCoLogo("se Connecter");
+      setSiLogo("Créer un compte");
+    } else {
+      setCoLogo(<i className="bi bi-box-arrow-in-right"></i>);
+      setSiLogo(<i className="bi bi-person-add"></i>);
+    }
+  }, [window.innerWidth]);
+
   return (
     <div
       style={{ backgroundColor: "rgba(255, 255, 255, .5)" }}
@@ -33,12 +45,12 @@ const Navbar = () => {
               style={{ fontSize: "20px" }}
             >
               <Link to="/signin" className="nav-link text-dark simple">
-                <i className="bi bi-box-arrow-in-right"></i>{" "}
+                {CoLogo}
               </Link>
             </li>
             <li className="nav-item fw-bolder" style={{ fontSize: "20px" }}>
               <Link to="/signup" className="nav-link text-dark simple">
-                <i className="bi bi-person-add"></i>{" "}
+                {siLogo}
               </Link>
             </li>
           </ul>

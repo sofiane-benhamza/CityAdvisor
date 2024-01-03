@@ -5,7 +5,7 @@ import { BrowserRouter } from "react-router-dom";
 import backgroundImage from "./img/bg.gif";
 
 export default function CityAdvisor() {
-  const [connected, setConnection] = useState(1);
+  const [connected, setConnection] = useState(false);
 
   //in case of refresh, check if user already logged in
   // Reading the value from localStorage

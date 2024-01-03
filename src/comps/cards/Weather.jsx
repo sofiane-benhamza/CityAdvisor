@@ -113,8 +113,8 @@ export default function Weather() {
                     <img
                       src={weatherData.is_day ? day : night}
                       alt={weatherData.is_day ? "img of day" : "img of night"}
-                      width="100px"
-                      height="100px"
+                      width="80px"
+                      height="80px"
                     />
                   </li>
                   <li className="list-group-item child">

@@ -1,13 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./style.css";
 import logoImg from "../img/logo.png";
-
+import { useState } from "react";
 const Header = ({ setConnected }) => {
   const disconnect = () => {
     localStorage.removeItem("userLoggedIn");
     setConnected(false);
   };
+
+  const [DisLogo, setDisLogo] = useState("");
+  useEffect(() => {
+    if (window.innerWidth > 768) {
+      setDisLogo("se Déconnecter");
+    } else {
+      setDisLogo(<i className="bi bi-box-arrow-right"></i>);
+    }
+  }, [window.innerWidth]);
 
   return (
     <div
@@ -38,7 +47,7 @@ const Header = ({ setConnected }) => {
             onClick={disconnect}
             style={{ fontSize: "20px" }}
           >
-            <i className="bi bi-box-arrow-right"></i>{" "}
+            {DisLogo}
           </Link>
         </div>
       </div>
