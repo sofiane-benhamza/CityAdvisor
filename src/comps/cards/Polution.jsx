@@ -118,18 +118,18 @@ export default function Polution({ setAitQua }) {
 
   return (
     <div
-      className="w-100 h-100 d-flex align-items-center justify-content-center mx-2"
+      className="w-100 h-100 d-flex align-items-center justify-content-center"
       style={{ position: "relative", top: "20px" }}
     >
+      <GetPolution setAQD={setAirQualityData} />
       <AirQualityTable data={airQualityData} />
     </div>
   );
   return (
     <div
-      className="w-100 h-100 d-flex align-items-center justify-content-center"
+      className="w-100 h-100 d-flex align-items-center justify-content-center mx-2"
       style={{ position: "relative", top: "20px" }}
     >
-      <GetPolution setAQD={setAirQualityData} />
       <AirQualityTable data={airQualityData} />
     </div>
   );

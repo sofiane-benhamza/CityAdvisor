@@ -34,7 +34,7 @@ export default function Weather() {
     }
   }
 
-  /* useEffect(() => {
+  useEffect(() => {
     const fetchWeatherData = async () => {
       if (city.length > 2) {
         try {
@@ -57,7 +57,7 @@ export default function Weather() {
     return () => {
       clearTimeout(timerRef.current);
     };
-  }, [city]);*/
+  }, [city]);
 
   // Function to calculate Weather Quality based on weather data
   const calculateWeatherQuality = (weatherData) => {
