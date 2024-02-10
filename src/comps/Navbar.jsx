@@ -34,7 +34,7 @@ const Navbar = () => {
               }}
             />
             <span className="fw-bolder text-dark simple">
-              City&nbsp;Advisor
+              City&nbsp;Hello 
             </span>
           </Link>
         </div>
