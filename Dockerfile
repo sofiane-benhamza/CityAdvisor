@@ -5,4 +5,4 @@ FROM httpd:latest
 COPY ./dist /usr/local/apache2/htdocs/
 
 # Expose port 80 to the outside world
-EXPOSE 800
+EXPOSE 80
