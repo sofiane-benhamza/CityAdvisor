@@ -25,7 +25,7 @@ jobs:
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v0.0.1-preview
         with:
-          azure_static_web_apps_api_token: ${{ secrets.a154e3ba1d51edd207dfb59a1acd5af63ff690657f6c9986bba6e192239215ed5-a84c49b2-d89e-42b5-b180-c5c6ea5f9aa0003460395 }}
+          azure_static_web_apps_api_token: ${{ secrets.79f421b8dc46c8d79f70b963530f65a0ea9d33d4dcc3984f057564871c39f15d5-4e7671d8-776b-4b53-baa9-8b5ea5c1a20a003460413 }}
           repo_token: ${{ secrets.GITHUB_TOKEN }} # Used for Github integrations (i.e. PR comments)
           action: "upload"
           ###### Repository/Build Configurations - These values can be configured to match you app requirements. ######
@@ -44,5 +44,5 @@ jobs:
         id: closepullrequest
         uses: Azure/static-web-apps-deploy@v0.0.1-preview
         with:
-          azure_static_web_apps_api_token: ${{ secrets.a154e3ba1d51edd207dfb59a1acd5af63ff690657f6c9986bba6e192239215ed5-a84c49b2-d89e-42b5-b180-c5c6ea5f9aa0003460395 }}
+          azure_static_web_apps_api_token: ${{ secrets.79f421b8dc46c8d79f70b963530f65a0ea9d33d4dcc3984f057564871c39f15d5-4e7671d8-776b-4b53-baa9-8b5ea5c1a20a003460413 }}
           action: "close"
