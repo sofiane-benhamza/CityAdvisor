@@ -110,6 +110,10 @@ function SearchBar({ setLat, setLon, setCity, setCountry }) {
           }
         })
         .catch((error) => {
+            setTimeout(() => {
+              setSearchButtonContent(<h4 className="bi bi-x"></h4>);
+              toggleSearchBarPosition();
+            }, 2000);
           console.log("Error : ", error);
         });
     } else {
